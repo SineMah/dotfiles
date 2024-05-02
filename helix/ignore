@@ -1,0 +1,4 @@
+.idea
+.svelte-kit
+vendor
+node_modules

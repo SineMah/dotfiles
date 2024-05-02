@@ -1,0 +1,31 @@
+theme = "onedark"
+[editor]
+rulers = [120]
+mouse = true
+bufferline = "always"
+scroll-lines = 15
+line-number = "absolute"
+text-width = 120
+
+
+[editor.file-picker]
+hidden = false
+parents = false
+git-ignore = false
+
+[editor.indent-guides]
+# render = true
+# character = "╎"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace]
+# render = "all"
+
+[editor.whitespace.render]
+nbsp = "all"
+nnbsp = "all"
+newline = "all"
