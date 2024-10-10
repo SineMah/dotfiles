@@ -8,8 +8,19 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+    "git": {
+        "inline_blame": {
+            "enabled": true
+        }
+    },
+    "assistant": {
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4o"
+        },
+        "version": "2"
+    },
     "ui_font_size": 18,
-    "buffer_font_size": 16,
     "theme": {
         "mode": "system",
         "light": "One Light",
@@ -55,7 +66,10 @@
     ],
     "languages": {
         "PHP": {
-            "format_on_save": "off"
+            "language_servers": ["intelephense", "!phpactor"],
+            "format_on_save": "off",
+            "tab_size": 4,
+            "use_tabs": false
         },
         "JSON": {
             "tab_size": 4
