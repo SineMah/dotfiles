@@ -1,2 +1,3 @@
 shell-integration = zsh
 initial-command = /usr/bin/zsh
+background-opacity = 0.85
