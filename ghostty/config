@@ -1,8 +1,86 @@
+#!/bin/bash
+
+chsh -s /bin/zsh
+
+# git clone git@github.com:ghostty-org/ghostty.git
+# sudo dnf install zig
+# sudo dnf install gtk4-devel zig libadwaita-devel
+# zig build -Doptimize=ReleaseFast
+
+sudo cp zig-out/bin/ghostty /usr/local/bin/
+
+sudo cp images/icons/icon_16.png /usr/share/icons/hicolor/16x16/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_32.png /usr/share/icons/hicolor/32x32/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_128.png /usr/share/icons/hicolor/128x128/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_256.png /usr/share/icons/hicolor/256x256/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_512.png /usr/share/icons/hicolor/512x512/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_16@2x.png /usr/share/icons/hicolor/16x16@2/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_32@2x.png /usr/share/icons/hicolor/32x32@2/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_128@2x.png /usr/share/icons/hicolor/128x128@2/apps/com.mitchellh.ghostty.png
+sudo cp images/icons/icon_256@2x.png /usr/share/icons/hicolor/256x256@2/apps/com.mitchellh.ghostty.png
+
+sudo cp images/icons/icon_256.png /usr/share/pixmaps/com.mitchellh.ghostty.png
+
+sudo chmod 644 /usr/share/icons/hicolor/*/apps/com.mitchellh.ghostty.png
+sudo gtk-update-icon-cache /usr/share/icons/hicolor/
+
+sudo desktop-file-install dist/linux/app.desktop
+sudo update-desktop-database
+
+mkdir -p ~/.config/ghostty
+mkdir -p ~/.config/ghostty/themes
+
+cat > ~/.config/ghostty/config <<EOF
+## background
 background-opacity = 0.85
 background-blur-radius = 20
 
-font-size = 16
+## theme
+# theme = OneDark
 
+## font
+font-size = 16
 font-family = ""
 font-family = "Source Code Pro"
+adjust-cell-width = 0
 adjust-cell-height = 20%
+
+## behavior
+clipboard-read = "allow"
+clipboard-paste-protection = false
+
+mouse-scroll-multiplier = 5
+
+## window
+window-decoration = true
+mouse-hide-while-typing = true
+window-padding-x = 0
+window-padding-y = 0
+window-theme = dark
+macos-window-shadow = false
+macos-titlebar-style = tabs
+EOF
+
+cat > ~/.config/ghostty/themes/OneDark <<EOF
+palette = 0=#000000
+palette = 1=#E06C75
+palette = 2=#a6d189
+palette = 3=#98C379
+palette = 4=#D19A66
+palette = 5=#61AFEF
+palette = 6=#C678DD
+palette = 7=#56B6C2
+palette = 8=#ABB2BF
+palette = 9=#5C6370
+palette = 10=#E06C75
+palette = 11=#98C379
+palette = 12=#D19A66
+palette = 13=#C678DD
+palette = 14=#56B6C2
+palette = 15=#FFFEFE
+background = 1E2127
+foreground = 5C6370
+cursor-color = 5C6370
+selection-background = 626880
+selection-foreground = c6d0f5
+EOF
