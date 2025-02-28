@@ -923,32 +923,42 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
-  --{ -- nvim-tree.lua Plugin
-  --    'nvim-tree/nvim-tree.lua',
-  --    dependencies = {
-  --      'nvim-tree/nvim-web-devicons', -- optional, für Dateisymbole
-  --    },
-  --    config = function()
-  --      require('nvim-tree').setup {
-  --          view = {
-  --              width = 30,
-  --              side = left,
-  --            },
-  --            renderer = {
-  --              group_empty = true,
-  --            },
-  --            filters = {
-  --              dotfiles = true,
-  --            },
-  --      }
-  --
-  --      --vim.api.nvim_create_autocmd('VimEnter', {
-  --      --  callback = function()
-  --      --    require('nvim-tree.api').tree.open()
-  --      --  end,
-  --      --})
-  --    end,
-  --  },
+    
+  { -- nvim-tree.lua Plugin
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons', -- optional, für Dateisymbole
+        },
+        config = function()
+            require('nvim-tree').setup {
+                view = {
+                    width = 30,
+                    side = left,
+                },
+                renderer = {
+                    group_empty = true,
+                },
+                filters = {
+                    dotfiles = false,
+                },
+            }
+
+            vim.api.nvim_create_user_command('Nto', function(args)
+                vim.cmd('NvimTreeOpen')
+            end, { desc = "Open NvimTree", nargs = '*' })
+
+            vim.api.nvim_create_user_command('Ntc', function(args)
+                vim.cmd('NvimTreeClose')
+            end, { desc = "Open NvimTree", nargs = '*' })
+
+
+            --vim.api.nvim_create_autocmd('VimEnter', {
+            --  callback = function()
+            --    require('nvim-tree.api').tree.open()
+            --  end,
+            --})
+        end,
+    },
 
   { -- Copilot
       'github/copilot.vim',
