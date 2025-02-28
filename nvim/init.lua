@@ -943,14 +943,21 @@ require('lazy').setup({
                 },
             }
 
+            vim.api.nvim_create_user_command('Ntt', function(args)
+                vim.cmd('NvimTreeToggle')
+            end, { desc = "Toggle NvimTree", nargs = '*' })
+
             vim.api.nvim_create_user_command('Nto', function(args)
                 vim.cmd('NvimTreeOpen')
             end, { desc = "Open NvimTree", nargs = '*' })
 
             vim.api.nvim_create_user_command('Ntc', function(args)
                 vim.cmd('NvimTreeClose')
-            end, { desc = "Open NvimTree", nargs = '*' })
+            end, { desc = "Close NvimTree", nargs = '*' })
 
+            vim.api.nvim_create_user_command('Ntf', function(args)
+                vim.cmd('NvimTreeFocus')
+            end, { desc = "Focus NvimTree", nargs = '*' })
 
             --vim.api.nvim_create_autocmd('VimEnter', {
             --  callback = function()
