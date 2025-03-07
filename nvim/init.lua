@@ -6,6 +6,9 @@
 -- curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
 -- npm install -g svelte-language-server
 -- npm install -g typescript typescript-language-server
+-- npm install -g dockerfile-language-server-nodejs
+-- npm install -g @microsoft/compose-language-service
+-- npm install -g yaml-language-server
 
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
@@ -611,6 +614,12 @@ require('lazy').setup({
         -- `:help lspconfig-all` for a list of all the pre-configured LSPs
         -- https://github.com/pmizio/typescript-tools.nvim
 
+        dockerls = {},
+
+        docker_compose_language_service = {},
+
+        yamlls = {},
+          
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
