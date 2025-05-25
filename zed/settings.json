@@ -8,11 +8,6 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-    "git": {
-        "inline_blame": {
-            "enabled": true
-        }
-    },
     "assistant": {
         "default_model": {
             "provider": "copilot_chat",
@@ -20,6 +15,25 @@
         },
         "version": "2"
     },
+    "toolbar": {
+        "breadcrumbs": true,
+        "quick_actions": false,
+        "selections_menu": false
+    },
+    "features": {
+        "edit_prediction_provider": "zed",
+        "copilot": true
+    },
+    "show_edit_predictions": true,
+    "inlay_hints": {
+        "enabled": true
+    },
+    "telemetry": {
+        "metrics": false,
+        "diagnostics": false
+    },
+    "linked_edits": true,
+    "hide_mouse": "on_typing_and_movement",
     "ui_font_size": 18,
     "theme": {
         "mode": "system",
@@ -28,24 +42,43 @@
     },
     "buffer_font_size": 18,
     "buffer_font_family": "Zed Plex Mono",
+    "ui_font_family": "Zed Plex Mono",
     "buffer_font_weight": 400,
     "multi_cursor_modifier": "alt",
     "buffer_line_height": {
         "custom": 2.2
     },
-    "vim_mode": false,
+    "vim_mode": true,
+    "relative_line_numbers": false,
     "hover_popover_enabled": true,
     "confirm_quit": false,
     "restore_on_startup": "last_session",
     "use_system_path_prompts": true,
-    "cursor_blink": true,
+    "cursor_blink": false,
     "show_completions_on_input": true,
     "enable_language_server": true,
     "autosave": "off",
+    "scrollbar": {
+        "show": "never"
+    },
+    "tab_bar": {
+        "show": true
+    },
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+    },
     "preview_tabs": {
         "enabled": true,
         "enable_preview_from_file_finder": false,
         "enable_preview_from_code_navigation": false
+    },
+    "git": {
+        "git_gutter": "tracked_files",
+        "inline_blame": {
+            "enabled": true,
+            "show_commit_summary": true
+        }
     },
     "remove_trailing_whitespace_on_save": true,
     "extend_comment_on_newline": true,
@@ -66,10 +99,7 @@
     ],
     "languages": {
         "PHP": {
-            "language_servers": ["intelephense", "!phpactor"],
-            "format_on_save": "off",
-            "tab_size": 4,
-            "use_tabs": false
+            "format_on_save": "on"
         },
         "JSON": {
             "tab_size": 4
@@ -78,6 +108,9 @@
             "tab_size": 4
         },
         "JavaScript": {
+            "tab_size": 4
+        },
+        "TypeScript": {
             "tab_size": 4
         },
         "CSS": {
