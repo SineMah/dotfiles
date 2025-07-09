@@ -8,7 +8,7 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-    "assistant": {
+    "agent": {
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-4o"
@@ -26,7 +26,7 @@
     },
     "show_edit_predictions": true,
     "inlay_hints": {
-        "enabled": true
+        "enabled": false
     },
     "telemetry": {
         "metrics": false,
@@ -55,11 +55,11 @@
     "restore_on_startup": "last_session",
     "use_system_path_prompts": true,
     "cursor_blink": false,
-    "show_completions_on_input": true,
+    "show_completions_on_input": false,
     "enable_language_server": true,
     "autosave": "off",
     "scrollbar": {
-        "show": "never"
+        "show": "always"
     },
     "tab_bar": {
         "show": true
