@@ -55,7 +55,7 @@
     "restore_on_startup": "last_session",
     "use_system_path_prompts": true,
     "cursor_blink": false,
-    "show_completions_on_input": false,
+    "show_completions_on_input": true,
     "enable_language_server": true,
     "autosave": "off",
     "scrollbar": {
