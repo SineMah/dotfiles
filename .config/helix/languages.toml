@@ -1,0 +1,61 @@
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+# comment-token = "//"
+indent = { tab-width = 4, unit = "	"}
+auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "svelte"
+language-servers = [ "svelteserver", "tailwindcss-ls" ]
+
+[[language]]
+name = "vue"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "vue"] }
+language-servers = ["typescript-language-server"]
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "go"
+language-servers = ["gopls"]
+auto-format = true
+formatter = { command = "goimports" }
+
+[language-server.phpactor]
+command = "phpactor"
+args = [ "language-server" ]
+
+[[language]]
+name = "php"
+language-servers = [ "intelephense", "phpactor"]
+file-types = ["php"]

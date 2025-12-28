@@ -1,0 +1,63 @@
+{
+  "name": "one-dark-pro",
+  "editor": {
+    "bg": [30, 33, 39],
+    "fg": [171, 178, 191],
+    "cursor": [97, 175, 239],
+    "selection_bg": [53, 59, 69],
+    "current_line_bg": [36, 40, 48],
+    "line_number_fg": [92, 99, 112],
+    "line_number_bg": [30, 33, 39]
+  },
+  "ui": {
+    "tab_active_fg": [171, 178, 191],
+    "tab_active_bg": [53, 59, 69],
+    "tab_inactive_fg": [130, 137, 151],
+    "tab_inactive_bg": [24, 26, 31],
+    "tab_separator_bg": [30, 33, 39],
+    "status_bar_fg": [171, 178, 191],
+    "status_bar_bg": [24, 26, 31],
+    "prompt_fg": [30, 33, 39],
+    "prompt_bg": [152, 195, 121],
+    "prompt_selection_fg": [171, 178, 191],
+    "prompt_selection_bg": [97, 175, 239],
+    "popup_border_fg": [92, 99, 112],
+    "popup_bg": [36, 40, 48],
+    "popup_selection_bg": [53, 59, 69],
+    "popup_text_fg": [171, 178, 191],
+    "suggestion_bg": [36, 40, 48],
+    "suggestion_selected_bg": [53, 59, 69],
+    "help_bg": [30, 33, 39],
+    "help_fg": [171, 178, 191],
+    "help_key_fg": [97, 175, 239],
+    "help_separator_fg": [92, 99, 112],
+    "help_indicator_fg": [224, 108, 117],
+    "help_indicator_bg": [30, 33, 39],
+    "split_separator_fg": [92, 99, 112]
+  },
+  "search": {
+    "match_bg": [229, 192, 123],
+    "match_fg": [30, 33, 39]
+  },
+  "diagnostic": {
+    "error_fg": [224, 108, 117],
+    "error_bg": [64, 40, 45],
+    "warning_fg": [229, 192, 123],
+    "warning_bg": [64, 58, 42],
+    "info_fg": [97, 175, 239],
+    "info_bg": [36, 52, 72],
+    "hint_fg": [130, 137, 151],
+    "hint_bg": [30, 33, 39]
+  },
+  "syntax": {
+    "keyword": [198, 120, 221],
+    "string": [152, 195, 121],
+    "comment": [92, 99, 112],
+    "function": [97, 175, 239],
+    "type": [229, 192, 123],
+    "variable": [171, 178, 191],
+    "constant": [209, 154, 102],
+    "operator": [86, 182, 194]
+  }
+}
+

@@ -1,0 +1,7 @@
+{
+    "theme": "one-dark-pro",
+    "file_explorer": {
+        "show_hidden": true,
+        "show_gitignored": true
+    }
+}
