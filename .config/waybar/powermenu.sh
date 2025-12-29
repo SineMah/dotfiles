@@ -6,9 +6,9 @@ choice=$(echo -e "$options" | rofi -dmenu -i -p "Power")
 
 case "$choice" in
   " Lock")
-    hyprlock ;;
+    swaylock -i /home/sine/.config/sway/bg00.jpg ;;
   "󰗽 Logout")
-    hyprctl dispatch exit ;;
+    swaymsg exit ;;
   "󰜉 Reboot")
     systemctl reboot ;;
   " Shutdown")
