@@ -113,6 +113,10 @@ gremote() {
     fi
 }
 
+screen() {
+  # grim -g "$(slurp)" - | satty -f -
+  grim -g "$(slurp)" - | satty --no-log -f - 2>/dev/null
+}
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
