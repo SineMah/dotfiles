@@ -8,6 +8,9 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+    "project_panel": {
+        "dock": "left"
+    },
     "edit_predictions": {
         "provider": "ollama",
     },
