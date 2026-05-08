@@ -120,7 +120,11 @@ screen() {
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
+
+
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/home/sine/.local/bin"
 
 eval "$(oh-my-posh init zsh --config /home/sine/.config/powerlevel10k_classic.omp.json)"
+
+export OLLAMA_API_KEY="$(cat ~/.ollama_api_key)"
